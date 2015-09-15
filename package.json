@@ -3,7 +3,7 @@
   "version": "0.89.0",
   "main": "./lib/main",
   "description": "Open an editor to a file in the project with `cmd-t`.",
-  "repository": "https://github.com/atom/fuzzy-finder",
+  "repository": "https://github.com/rafaelmaiolla/black-bird-fuzzy-finder",
   "license": "MIT",
   "dependencies": {
     "async": "0.2.6",
@@ -19,7 +19,11 @@
   "engines": {
     "atom": "*"
   },
-  "devDependencies": {
-    "coffeelint": "^1.9.7"
+  "consumedServices": {
+    "atom.directory-provider": {
+      "versions": {
+        "^0.1.0": "consumeDirectoryProvider"
+      }
+    }
   }
 }

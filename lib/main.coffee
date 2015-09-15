@@ -11,6 +11,8 @@ module.exports =
       type: 'boolean'
       default: false
 
+  directoryProviderList: []
+
   activate: (state) ->
     @active = true
 
@@ -89,3 +91,8 @@ module.exports =
     @projectPathsSubscription = null
     @loadPathsTask?.terminate()
     @loadPathsTask = null
+
+  consumeDirectoryProvider: (provider) ->
+    LoadPathsHandler = require './load-paths-handler'
+    debugger;
+    LoadPathsHandler.addProvider(provider);
